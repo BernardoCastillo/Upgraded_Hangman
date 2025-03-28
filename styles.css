@@ -1,0 +1,147 @@
+/* center the container */
+body{
+    padding: 120px 0px 0px 0px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eee;
+}
+/* box the header */
+header{
+    border: 2px solid black;
+    text-align: center;
+}
+/* center the box and make it different from the body */
+.container{
+    max-width: 50%;
+    margin: 0 auto;
+    background-color: white;
+}
+/* style the input box for the guesses */
+input{
+    width: 50px;
+    font-size: 30px;
+    border: 2px solid black;
+    margin: 0px 5px 0px 0px;
+    text-align: center;
+}
+/* box the hangman box */
+#box{
+    padding: 10px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 25px;
+    border-top: 0;
+}
+/* check button */
+#check{
+    background-color: rgb(16, 182, 16);
+    color: white;
+    border: 2px solid black;
+    border-radius: 1.5em;
+    font-size: 30px;
+    margin: 0px 5px 0px 5px;
+    padding: 5px;
+    transition-property: background-color;
+    transition-duration: 1s;
+}
+/* animation/transition */
+#check:hover{
+    background-color: green;
+}
+/* reset game button */
+#reset{
+    background-color: red;
+    color: white;
+    border: 2px solid black;
+    border-radius: 1.5em;
+    font-size: 30px;
+    margin: 0px 5px 0px 5px;
+    padding: 5px;
+    transition-property: background-color;
+    transition-duration: 1s;
+}
+/* animation/transition */
+#reset:hover{
+    background-color: rgb(216, 1, 1);
+}
+/* actual hangman box */
+#hangmanBox{
+    font-size: 50px;
+    border: 2px solid black;
+    width: 200px;
+    height: 175px;
+    margin: 0 auto;
+}
+/* show the wrong letters */
+.letters-wrong{
+    margin: 5px 0px 0px 0px;
+    font-size: 30px;
+    color: red;
+}
+/* seperate the number of guesses left */
+.guess-left{
+    margin: 5px 0px 0px 0px;
+    font-size: 30px;
+}
+/* feedback area */
+#feedback{
+    font-size: 25px;
+}
+/* box the entire guessing area (check button, input button, reset button, guesses left, how to play button, and letters-wrong) */
+#guessingArea{
+    border: 2px solid black;
+    border-top: 0;
+    padding: 10px;
+    text-align: center;
+}
+/* feedback upon winning or losing */
+#thewordwas{
+    font-size: 20px;
+}
+/* styling for the rules/how to play area */
+#rule{
+    background-color: darkgray;
+    color: white;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 1.5em;
+    transition-property: background-color;
+    transition-duration: 1s;
+    margin: 10px 0px 2px 0px;
+}
+/* transition/animation */
+#rule:hover{
+    background-color: gray;
+}
+ /* button for returning to the game  */
+#return-game{
+    background-color: skyblue;
+    font-size: 20px;
+    padding: 5px;
+    color: white;
+    border-radius: 1.5em;
+    display: none;
+    transition-property: background-color;
+    transition-duration: 1s;
+}
+/* animation/transition */
+#return-game:hover{
+    background-color: dodgerblue;
+    
+}
+/* styling for the actual rules */
+#rulesExplain{
+    text-align: start;
+    display: none;
+}
+/* header for the rules */
+#rulesExplain h3{
+    text-align: center;
+    font-size: 25px;
+    text-decoration: underline;
+    margin: 0px 0px px 0px;
+}
+/* space between the actual rules */
+#rulesExplain li{
+    margin-bottom: 7px;
+}

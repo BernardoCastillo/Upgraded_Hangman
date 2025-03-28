@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Guessing Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- entire container for everything -->
+    <div class="container">
+        <header id="header">
+            <h1>Hangman Game</h1>
+        </header>
+        <div id="box">
+            <!-- show the hangman -->
+            <div id="hangmanBox"></div>
+
+            <!-- show the hidden word (ex:_,_,_,_,_,_) -->
+            <div id="underscores"></div>
+        </div>
+        <!-- area for guessing and results from guesses -->
+        <div id="guessingArea">
+            <input type="text" maxlength="1" id="guess" placeholder="a-z">
+            <button onclick="checkGuess()" id="check">Check Guess</button>
+            <button onclick="resetGame()" id="reset">Reset Game</button>
+            <div class="letters-wrong" id="wrong">Letters wrong: <span id="letWrong"></span></div>
+            <div class="guess-left" id="left">Guesses left: <span id="guessesLeft"></span></div>
+            <div id="feedback"></div>
+            <div id="thewordwas"></div>
+            <!-- button for rules/how to play area -->
+            <button onclick="rules()" id="rule">How to Play</button>
+            <!-- box for the rules -->
+            <div id="rulesExplain">
+                <h3>How to Play</h3>
+                <ul>
+                    <li>You have 6 guesses in order to guess the word</li>
+                    <li>Type in your guess in the form of a letter A-Z into the input box.</li>
+                    <li>Once you want to guess, click "Check Guess".</li>
+                    <li>If you are right, the letter you chose will be revealed.</li>
+                    <li>Once you guess all the letters, you win.</li>
+                    <li>If you are wrong, you will lose a guess, and the hangman will gain a limb.</li>
+                    <li>Once the hangman is completed at 0 guesses left, you lose.</li>
+                </ul>
+            </div>
+            <!-- button to get rid of rules and return to the game -->
+            <button onclick="returnGame()" id="return-game">Return to Game</button>
+        </div>
+    </div>
+    <!-- javascript -->
+    <script src = "script.js" defer></script>
+</body>
+</html>
