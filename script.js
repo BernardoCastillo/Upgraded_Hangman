@@ -204,3 +204,8 @@ function returnGame(){
     explain.style.display = "none";
     return_Game.style.display = "none";
 }
+document.getElementById('guess').addEventListener('keyup', function(event){
+    if(event.key === 'Enter'){
+        checkGuess();
+    }
+});
