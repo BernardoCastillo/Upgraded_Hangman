@@ -206,6 +206,8 @@ function returnGame(){
 }
 document.getElementById('guess').addEventListener('keyup', function(event){
     if(event.key === 'Enter'){
-        checkGuess();
+        if(numLeft > 0){
+            checkGuess();
+        }
     }
 });
