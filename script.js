@@ -38,7 +38,7 @@ function showWord(amount){
 }
 let htmlUnder = showWord(splitWord.length)
 // console.log("htmlUnder", htmlUnder);
-document.getElementById('underscores').innerHTML = htmlUnder;
+document.getElementById('underscores').innerHTML = htmlUnder.toString().toUpperCase();
 
 
 let guessesLeft = document.getElementById('guessesLeft');
@@ -61,7 +61,7 @@ function checkGuess(){
         var pass = required.test(guessLetter);
         if(pass == true){
                 if(splitWord.includes(guessLetter)){
-                    document.getElementById('underscores').innerHTML = htmlUnder;
+                    document.getElementById('underscores').innerHTML = htmlUnder.toString().toUpperCase();
                     return true;
                 }else if(!splitWord.includes(guessLetter) && !lettersWrong.includes(guessLetter)){
                     return false;
