@@ -37,8 +37,11 @@ function showWord(amount){
     return underscoreWord;
 }
 let htmlUnder = showWord(splitWord.length)
+console.log(splitWord);
+// bottom line will get rid of the commas, can either have it all together or spaced out. fix the code now
+// htmlUnder = htmlUnder.toString().replaceAll(',', ' ');
 // console.log("htmlUnder", htmlUnder);
-document.getElementById('underscores').innerHTML = htmlUnder.toString().toUpperCase();
+document.getElementById('underscores').innerHTML = htmlUnder.toString().replaceAll(',', ' ');
 
 
 let guessesLeft = document.getElementById('guessesLeft');
@@ -61,7 +64,7 @@ function checkGuess(){
         var pass = required.test(guessLetter);
         if(pass == true){
                 if(splitWord.includes(guessLetter)){
-                    document.getElementById('underscores').innerHTML = htmlUnder.toString().toUpperCase();
+                    document.getElementById('underscores').innerHTML = htmlUnder.toString().replaceAll(',', ' ');
                     return true;
                 }else if(!splitWord.includes(guessLetter) && !lettersWrong.includes(guessLetter)){
                     return false;
@@ -97,8 +100,8 @@ function checkGuess(){
         let lastLetterIndex = splitWord.lastIndexOf(guessLetter);
         // console.log("last", lastLetterIndex);
         // console.log("first", letterIndex);
-        htmlUnder.splice(letterIndex, 1, guessLetter);
-        htmlUnder.splice(lastLetterIndex, 1, guessLetter);
+         htmlUnder.splice(letterIndex, 1, guessLetter);
+         htmlUnder.splice(lastLetterIndex, 1, guessLetter);
         
         if(!htmlUnder.includes("_")){
             feedback.innerHTML = "You won!";
